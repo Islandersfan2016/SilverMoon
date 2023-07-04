@@ -101,6 +101,7 @@ contract CollatorBond is IERC3475, IERC3475EXTENSION {
         emit Transfer(msg.sender, _from, _to, _transactions);
     }
 
+    // Issues bonds to collator address to sell or sent directly to bond investor
     function issue(address _to, Transaction[] memory _transactions)
     external
     virtual
@@ -117,6 +118,7 @@ contract CollatorBond is IERC3475, IERC3475EXTENSION {
         emit Issue(msg.sender, _to, _transactions);
     }
 
+    // Setting up share of rewards from Collator account or funds can be redeemed on maturity date
     function redeem(address _from, Transaction[] memory _transactions)
     external
     virtual
